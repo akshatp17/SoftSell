@@ -36,14 +36,14 @@ const CustomerTestimonyCard = (props: CustomerTestimonyCardProps) => {
       </div>
 
       {/* Testimonial Text */}
-      <p className="text-gray-700 text-sm leading-relaxed text-center items-center flex flex-col gap-2">
+      <div className="text-gray-700 text-sm leading-relaxed text-center items-center flex flex-col gap-2">
         “{testimony}”
         <div className="flex">
           {[...Array(rating)].map((_, i) => (
             <Star key={i} size={18} className="text-red-500" fill="red" />
           ))}
         </div>
-      </p>
+      </div>
     </div>
   );
 };
