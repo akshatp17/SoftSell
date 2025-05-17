@@ -33,7 +33,7 @@ A responsive, single-page marketing website for a fictional software resale star
 
 ### 🎨 Design Choices
 
-- **Color Palette**: Used indigo (`#4F46E5`) and emerald (`#22C55E`) as primary and accent colors to convey trust, modernity, and growth — matching the tech and finance tone of SoftSell.
+- **Color Palette**: Used indigo (`#4F46E5`) as primary to convey trust, modernity, and growth — matching the tech and finance tone of SoftSell.
 - **Typography**: Chose clean, readable sans-serif fonts (via Tailwind defaults) for a professional and accessible look.
 - **Layout**: Used a mobile-first, single-column design that gracefully expands into a two-column layout for larger screens.
 - **Component Structure**: Modularized components (Hero, Navbar, Sections, Footer) for maintainability and scalability.
