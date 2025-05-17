@@ -1,15 +1,20 @@
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 text-gray-700">
+    <motion.footer
+      className="bg-gray-50 text-gray-700 py-5"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           {/* Logo + Tagline */}
           <div>
-            <h2 className="text-2xl font-bold text-indigo-600 mt-2">
-              SoftSell
-            </h2>
+            <h2 className="text-2xl font-bold text-indigo-600">SoftSell</h2>
             <p className="mt-2 text-sm">
               Sell your unused software licenses for cash — securely and
               instantly.
@@ -18,32 +23,32 @@ const Footer = () => {
 
           {/* Social & Contact */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="font-semibold text-gray-900 mb-2">
               Connect With Us
             </h3>
             <div className="flex space-x-4">
               <a href="mailto:contact@softsell.io" aria-label="Email">
-                <Mail className="w-5 h-5 hover:text-indigo-600" />
+                <Mail className="w-5 h-5 hover:text-indigo-600 transition-colors" />
               </a>
               <a href="#" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5 hover:text-indigo-600" />
+                <Linkedin className="w-5 h-5 hover:text-indigo-600 transition-colors" />
               </a>
               <a href="#" aria-label="Twitter">
-                <Twitter className="w-5 h-5 hover:text-indigo-600" />
+                <Twitter className="w-5 h-5 hover:text-indigo-600 transition-colors" />
               </a>
               <a href="#" aria-label="Facebook">
-                <Facebook className="w-5 h-5 hover:text-indigo-600" />
+                <Facebook className="w-5 h-5 hover:text-indigo-600 transition-colors" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 mb-3 text-sm text-center border-t pt-4 border-gray-200 dark:border-slate-700">
+        <div className="mt-10 text-sm text-center border-t pt-4 border-gray-200">
           © {new Date().getFullYear()} SoftSell. All rights reserved.
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

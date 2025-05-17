@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { motion } from "framer-motion";
 
 interface ChooseCardsProps {
   icon: JSX.Element;
@@ -8,7 +9,13 @@ interface ChooseCardsProps {
 
 const ChooseCards = ({ icon, title, desc }: ChooseCardsProps) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 h-full">
+    <motion.div
+      className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 h-full"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className="flex items-start gap-4">
         <div className="text-indigo-600 text-3xl">{icon}</div>
         <div>
@@ -16,7 +23,7 @@ const ChooseCards = ({ icon, title, desc }: ChooseCardsProps) => {
           <p className="text-gray-600 text-sm mt-1">{desc}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
