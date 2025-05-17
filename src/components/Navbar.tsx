@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.nav
-      className="mx-auto w-[90%] h-14 px-6 flex items-center justify-between rounded-full sticky z-20 top-4 left-0 right-0 shadow-xl backdrop-blur-xl bg-white/80"
+      className="mx-auto w-[90%] h-14 px-6 flex items-center justify-between rounded-full sticky top-4 left-0 right-0 shadow-xl backdrop-blur-xl bg-white/80 z-40"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
